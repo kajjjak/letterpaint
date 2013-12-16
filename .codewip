@@ -1,0 +1,39 @@
+{
+  "name": "Letter paint",
+  "version": "master",
+  "deployer": "ASYeE4C1n",
+  "plugins": {
+    "bJ4feaAMu": {
+      "name": "Javascript"
+    },
+    "TL8ml51mE": {
+      "name": "CSS"
+    },
+    "ySC3tRlCN": {
+      "name": "Markdown"
+    },
+    "ASYeE4C1n": {
+      "name": "HTML preview"
+    },
+    "4zuroooaY": {
+      "name": "Codwip plugin"
+    },
+    "PG4U8wocc": {
+      "name": "HTML"
+    },
+    "github": {
+      "repobranch": "0.1.1",
+      "username": "",
+      "password": "",
+      "reponame": "letterpaint",
+      "repouser": "kajjjak",
+      "repopush_comment": "2 different games supported"
+    }
+  },
+  "created": 1387224980183,
+  "updated": 1387224980183,
+  "private": false,
+  "fork_id": "f8r28xQmD",
+  "preview": "hMso9KdNh",
+  "description": ""
+}
