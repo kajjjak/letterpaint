@@ -9,14 +9,16 @@
 <body>
   <div id="container" class="container">
 
-    <div id="chars" class="gamedata">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789</div>
+    <!--div id="chars" class="gamedata">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789</div -->
+    <div class="gamedata" id="chars">12</div>
+    <div class="gameword" id="words">12</div>
 
     <canvas></canvas>
 
-    <h1 class="toppanel">letterpaint</h1>
+    <h1 class="toppanel">Stafa álfurinn skrifar</h1>
 
     <div id="intro" class="cover">
-      <p>Paint over the letter you see on the screen. Can you write it without going outside of it?</p>
+      <p>Getur þú teiknað yfir letrið?</p>
       <button class="actionbutton">➜</button>
     </div>
 
@@ -24,12 +26,12 @@
     <button id="infos" class="navbutton">i</button>
 
     <div id="win" class="cover check">
-      <p>Good job!</p> 
+      <p>Vel gert!</p> 
       <button class="actionbutton">➜</button>
     </div>
 
     <div id="error" class="cover">
-      <p>You painted outside the letter!</p> 
+      <p>Þú teiknaðir fyrir utan stafinn!</p> 
       <button class="actionbutton">➜</button>
     </div>
 
