@@ -29,6 +29,8 @@
   var linewidth = 20;
   var pixels = 0;
   var letterpixels = 0;
+  var letterindex = -1;
+  var letterdrawn = {};
 
   /* Mouse and touch events */
   var mousedown = false;
@@ -102,19 +104,31 @@
   function cancel() {
     paintletter();
   }
-  function paintletter(retryletter) {
+  function getLetter(){
     var chars = charscontainer.innerHTML.split('');
-    letter = retryletter ||
-             chars[parseInt(Math.random() * chars.length,10)];
+    if (true){ 
+        if(letterindex >= (chars.length-1)){ 
+            letterindex = -1;
+            letterdrawn = {};
+        } 
+        letterindex = letterindex + 1; 
+    }else{ 
+        letterindex = parseInt(Math.random() * chars.length,10); 
+    }
+    return chars[letterindex];
+  }
+  function paintletter(retryletter) {
+    letter = retryletter || getLetter();
+    if(!letterdrawn[letter]){letterdrawn[letter] = true;}
     c.width = container.offsetWidth;
     c.height = container.offsetHeight;
     cx.font = 'bold ' + fontsize + 'px Open Sans';
     cx.fillStyle = 'rgb(' + textcolour.join(',') + ')';
     cx.strokeStyle = 'rgb(' + paintcolour.join(',') + ')';
-    cx.shadowOffsetX = 2;
-    cx.shadowOffsetY = 2;
-    cx.shadowBlur = 4;
-    cx.shadowColor = '#666';
+    cx.shadowOffsetX = 0;
+    cx.shadowOffsetY = 0;
+    //cx.shadowBlur = 4;
+    //cx.shadowColor = 'pink';
 
     cx.textBaseline = 'baseline';
     cx.lineWidth = linewidth;
@@ -135,6 +149,20 @@
     cx.shadowBlur = 0;
     cx.shadowColor = '#333';
     setstate('play');
+    drawLetters();
+  }
+
+  function drawLetters(){
+    var chars = charscontainer.innerHTML.split('');
+    var charsdisplayed = "";
+    for (var i = 0; i < chars.length; i++){
+        if(letterdrawn[chars[i]]){
+            charsdisplayed = charsdisplayed + "<i>" + chars[i] + "</i>";
+        }else{
+            charsdisplayed = charsdisplayed + "<b>" + chars[i] + "</b>";
+        }
+    }
+    document.querySelector("#words").innerHTML = charsdisplayed; 
   }
 
   function getpixelamount(r, g, b) {
