@@ -1,0 +1,37 @@
+{
+  "name": "letterpaint",
+  "version": "master",
+  "deployer": "ASYeE4C1n",
+  "plugins": {
+    "bJ4feaAMu": {
+      "name": "Javascript"
+    },
+    "TL8ml51mE": {
+      "name": "CSS"
+    },
+    "ySC3tRlCN": {
+      "name": "Markdown"
+    },
+    "ASYeE4C1n": {
+      "name": "HTML preview"
+    },
+    "4zuroooaY": {
+      "name": "Codwip plugin"
+    },
+    "PG4U8wocc": {
+      "name": "HTML"
+    },
+    "github": {
+      "repobranch": "master",
+      "username": "",
+      "password": "",
+      "reponame": "letterpaint",
+      "repouser": "",
+      "repopush_comment": "test"
+    }
+  },
+  "created": 1389773412451,
+  "updated": 1389773412451,
+  "private": false,
+  "fork_id": "qL4Qm9N0H"
+}
